@@ -3,173 +3,313 @@
 <head>
     <meta charset="utf-8">
     <title>Mahesh Yaddanapudi - Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --navy: #16324f;
+            --navy-deep: #102538;
+            --accent: #2f6fb2;
+            --accent-soft: #e8f0f9;
+            --text: #2b3440;
+            --muted: #5c6a7a;
+            --line: #d8e0e9;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            color: var(--text);
+            font-size: 10.6px;
+            line-height: 1.5;
+            max-width: 860px;
             margin: 0 auto;
-            padding: 20px;
+            background: #fff;
         }
-        h1, h2, h3 {
-            color: #000;
+
+        /* ---------- Header band ---------- */
+        .head {
+            background: linear-gradient(120deg, var(--navy-deep), var(--navy) 65%, #1d4468);
+            color: #fff;
+            padding: 26px 34px 22px;
+            border-radius: 3px;
         }
-        h1 {
-            font-size: 28px;
-            margin-bottom: 5px;
+        .head h1 {
+            font-size: 27px;
+            font-weight: 800;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
         }
+        .head .role {
+            font-size: 12.5px;
+            font-weight: 600;
+            color: #aecdf0;
+            letter-spacing: 0.6px;
+            margin-top: 3px;
+        }
+        .head .brand {
+            font-size: 10px;
+            color: #7fa3c8;
+            font-style: italic;
+            margin-top: 2px;
+        }
+        .head .contact {
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.18);
+            font-size: 9.8px;
+            color: #d7e5f4;
+            letter-spacing: 0.3px;
+        }
+        .head .contact a { color: #aecdf0; text-decoration: none; font-weight: 600; }
+        .head .contact .sep { color: #557699; margin: 0 7px; }
+
+        .page { padding: 18px 34px 30px; }
+
+        /* ---------- Sections ---------- */
+        section { margin-top: 16px; }
         h2 {
-            font-size: 22px;
-            margin-top: 0;
-            margin-bottom: 20px;
-            color: #444;
+            font-size: 11.5px;
+            font-weight: 800;
+            letter-spacing: 2.2px;
+            text-transform: uppercase;
+            color: var(--navy);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 9px;
         }
-        h3 {
-            font-size: 18px;
-            margin-bottom: 5px;
+        h2::after { content: ''; flex: 1; height: 1.5px; background: linear-gradient(90deg, var(--accent), var(--line)); }
+
+        .summary { color: var(--text); font-size: 10.8px; text-align: justify; }
+
+        /* ---------- Skills ---------- */
+        .skill-group { margin-bottom: 6px; display: flex; gap: 8px; align-items: baseline; }
+        .skill-group .label {
+            flex: 0 0 128px;
+            font-weight: 700;
+            font-size: 9.6px;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
         }
-        hr {
-            border: none;
-            border-top: 1px solid #ddd;
-            margin: 20px 0;
+        .chips { flex: 1; }
+        .chip {
+            display: inline-block;
+            background: var(--accent-soft);
+            color: #274e77;
+            border-radius: 3px;
+            padding: 1.5px 7px;
+            margin: 0 3px 3px 0;
+            font-size: 9.3px;
+            font-weight: 500;
         }
-        a {
-            color: #0066cc;
-            text-decoration: none;
+
+        /* ---------- Experience ---------- */
+        .job { margin-bottom: 12px; break-inside: avoid-page; }
+        .job.allow-break { break-inside: auto; }
+        .job-head { display: flex; justify-content: space-between; align-items: baseline; }
+        .job-head .title { font-size: 11.8px; font-weight: 700; color: var(--navy); }
+        .job-head .when { font-size: 9.6px; font-weight: 600; color: var(--muted); white-space: nowrap; }
+        .job-sub { display: flex; justify-content: space-between; align-items: baseline; margin-top: 1px; }
+        .job-sub .co { font-size: 10.4px; font-weight: 700; color: var(--accent); letter-spacing: 0.3px; }
+        .job-sub .where { font-size: 9.4px; color: var(--muted); }
+        .job .note { font-size: 9.3px; color: var(--muted); font-style: italic; margin-top: 1px; }
+        .job p.desc { margin-top: 4px; color: var(--text); }
+        .job ul { margin-top: 4px; padding-left: 0; list-style: none; }
+        .job li {
+            position: relative;
+            padding-left: 13px;
+            margin-bottom: 3px;
+            break-inside: avoid;
         }
-        p {
-            margin-bottom: 10px;
+        .job li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); font-size: 9px; top: 1px; }
+
+        /* ---------- Two-column utility blocks ---------- */
+        .cols { display: flex; gap: 22px; }
+        .cols > div { flex: 1; }
+        .mini { margin-bottom: 7px; break-inside: avoid; }
+        .mini .t { font-weight: 700; color: var(--navy); font-size: 10.2px; }
+        .mini .t .tag { color: var(--accent); font-weight: 600; }
+        .mini .d { color: var(--muted); font-size: 9.6px; }
+
+        .cert-cols { columns: 2; column-gap: 26px; }
+        .cert { break-inside: avoid; margin-bottom: 5px; padding-left: 12px; position: relative; font-size: 9.7px; }
+        .cert::before { content: '◆'; position: absolute; left: 0; top: 1px; color: var(--accent); font-size: 7px; }
+        .cert .who { color: var(--muted); }
+
+        .edu-lang { display: flex; gap: 22px; }
+        .edu-lang > div { flex: 1; }
+
+        .langs { display: flex; gap: 16px; font-size: 10px; }
+        .langs b { color: var(--navy); }
+
+        footer {
+            margin-top: 14px;
+            padding-top: 8px;
+            border-top: 1px solid var(--line);
+            font-size: 8.6px;
+            color: var(--muted);
+            text-align: center;
+            letter-spacing: 0.4px;
         }
-        ul {
-            margin-top: 5px;
+
+        /* ---------- Screen niceties ---------- */
+        @media screen {
+            body { margin: 24px auto; box-shadow: 0 2px 24px rgba(16, 37, 56, 0.15); border-radius: 4px; overflow: hidden; }
+        }
+        @media print {
+            body { max-width: none; }
+            .head { border-radius: 0; }
         }
     </style>
 </head>
 <body>
-    <h1>MAHESH YADDANAPUDI</h1>
-    <h2>Tech Alchemist — Code, Cloud, & ML</h2>
-    
-    <p>maheshyaddanapudi@gmail.com | <a href="https://www.linkedin.com/in/maheshyaddanapudi/">LinkedIn</a> | <a href="https://github.com/maheshyaddanapudi">GitHub</a> | <a href="https://zzzmahesh.medium.com/">Medium</a></p>
-    
-    <hr>
-    
-    <h2>PROFESSIONAL SUMMARY</h2>
-    
-    <p>Tech Alchemist with 15+ years of experience integrating cutting-edge ML solutions with microservices and cloud technology. Specializing in Cloud, Microservices, Service Oriented Architecture (SOA), Automation, Core Java, RESTful and SOAP Webservices, DevOps, and Ansible. Former Google and Oracle engineer with a proven track record of architecting solutions that drive operational efficiency and deliver premier user experiences.</p>
-    
-    <hr>
-    
-    <h2>PROFESSIONAL EXPERIENCE</h2>
-    
-    <h3>WORKDAY</h3>
-    <p><strong>Software Engineer</strong><br>
-    <em>Sep 2022 - Present | Santa Clara, California, United States</em></p>
-    
-    <p>Currently shaping the technological forefront at Workday as a full-stack software engineer, focusing on cloud-native applications and microservices architecture.</p>
-    
-    <h3>ORACLE</h3>
-    <p><strong>Principal Member of Technical Staff</strong><br>
-    <em>Jan 2022 - Sep 2022 | Seattle, Washington, United States</em></p>
-    
-    <p>Worked as a Principal Member of Technical Staff, contributing to Oracle's cloud infrastructure and enterprise solutions.</p>
-    
-    <h3>GOOGLE</h3>
-    <p><strong>Software Engineer</strong><br>
-    <em>May 2021 - Dec 2021 | Warsaw, Mazowieckie, Poland</em></p>
-    
-    <p>Managed customer problems through effective diagnosis and resolution. Worked on Google Cloud Platform products and collaborated with multiple product and engineering teams.</p>
-    
-    <h3>JPMORGAN CHASE & CO.</h3>
-    <p><strong>Vice President - Technology</strong><br>
-    <em>Apr 2019 - Apr 2021 | Bengaluru, Karnataka, India</em></p>
-    
-    <p>Led technology initiatives as Vice President, focusing on financial technology solutions and enterprise architecture.</p>
-    
-    <h3>VERIZON</h3>
-    <p><strong>Senior Consultant</strong><br>
-    <em>Jul 2017 - Mar 2019 | Chennai, Tamil Nadu, India</em></p>
-    
-    <p>Served as a Senior Consultant, developing and implementing telecommunications solutions and services.</p>
-    
-    <hr>
-    
-    <h2>TECHNICAL SKILLS</h2>
-    
-    <ul>
-        <li><strong>Programming Languages</strong>: Java, Python, JavaScript, TypeScript</li>
-        <li><strong>Frameworks & Libraries</strong>: Spring Boot, Angular, React, Node.js</li>
-        <li><strong>Cloud Platforms</strong>: Google Cloud Platform, AWS, Azure</li>
-        <li><strong>DevOps & CI/CD</strong>: Docker, Kubernetes, Jenkins, Ansible</li>
-        <li><strong>Databases</strong>: Oracle, MySQL, PostgreSQL, MongoDB, MariaDB, Elasticsearch</li>
-        <li><strong>Microservices</strong>: Netflix OSS Stack, Spring Cloud, API Gateway</li>
-        <li><strong>Machine Learning</strong>: TensorFlow, PyTorch, Hugging Face Transformers</li>
-        <li><strong>Other Technologies</strong>: RESTful APIs, SOAP, OAuth2, Kafka, RabbitMQ</li>
-    </ul>
-    
-    <hr>
-    
-    <h2>OPEN SOURCE CONTRIBUTIONS</h2>
-    
-    <h3>Maven Central / OSS Artifacts</h3>
-    <ul>
-        <li><strong>Spring Boot Starter For Conductor OSS</strong> - A Spring Boot starter for Conductor OSS with Queue Configuration</li>
-        <li><strong>Conductor Boot</strong> - Spring Boot Wrapper of Netflix Conductor Server with Embedded Security, Database, and Elasticsearch</li>
-    </ul>
-    
-    <h3>Machine Learning Models</h3>
-    <ul>
-        <li><strong>StarCoder2 3B</strong> - Base and instruction-tuned versions of StarCoder2 3B model</li>
-        <li><strong>Flowable Documentation Models</strong> - Various Llama and Qwen-based models for Flowable documentation</li>
-        <li><strong>Conductor Documentation Model</strong> - Netflix Conductor documentation model based on Llama 3.2</li>
-    </ul>
-    
-    <h3>GitHub Projects</h3>
-    <ul>
-        <li><strong>conductor-ng-ui</strong> - Angular UI for Conductor Workflows and Workflow Executions management</li>
-        <li><strong>ansible-playbook-generator-ui</strong> - Angular UI for generating Ansible Playbooks</li>
-        <li><strong>conductor-boot</strong> - Spring Boot Wrapper of Netflix Conductor Server</li>
-        <li><strong>ansible-playbook-json2yaml</strong> - Python Flask Wrapper exposing APIs to convert JSON to Ansible Playbook YAML</li>
-        <li><strong>ansible-docs-boot</strong> - Spring Boot Wrapper to Expose Ansible Commands with I/O fields through APIs</li>
-        <li><strong>spring-boot-starter-conductor</strong> - Spring Boot Starter For Netflix Conductor Community Version</li>
-    </ul>
-    
-    <hr>
-    
-    <h2>EDUCATION</h2>
-    
-    <h3>ANNA UNIVERSITY</h3>
-    <p><strong>Bachelor of Engineering in Computer Science</strong><br>
-    <em>2005 - 2009</em></p>
-    
-    <hr>
-    
-    <h2>CERTIFICATIONS</h2>
-    
-    <ul>
-        <li>IBM Certified Solution Designer - WebSphere Application Server Network Deployment V8.0</li>
-        <li>IBM Certified System Administrator - WebSphere Application Server Network Deployment V8.0</li>
-        <li>IBM Certified Application Developer - WebSphere Application Server V8.0</li>
-    </ul>
-    
-    <hr>
-    
-    <h2>PUBLICATIONS</h2>
-    
-    <ul>
-        <li><strong>Netflix Conductor — Spring Boot Wrapper</strong> - A comprehensive guide to using the Spring Boot wrapper for Netflix Conductor</li>
-        <li><strong>Bridging Realms: Envisioning a World of Coexistence Between Humans and AI</strong> - Exploration of human-AI collaboration and coexistence</li>
-        <li><strong>Microservices: The Future</strong> - Analysis of microservices architecture and its impact on software development</li>
-    </ul>
-    
-    <hr>
-    
-    <h2>LANGUAGES</h2>
-    
-    <ul>
-        <li>English (Professional)</li>
-        <li>Hindi (Professional)</li>
-        <li>Telugu (Native)</li>
-    </ul>
+    <div class="head">
+        <h1>Mahesh Yaddanapudi</h1>
+        <div class="role">Senior Machine Learning Engineer · Agentic AI &amp; Cloud Architecture</div>
+        <div class="brand">Tech Alchemist — Code, Cloud, &amp; ML</div>
+        <div class="contact">
+            maheshyaddanapudi@gmail.com
+            <span class="sep">|</span> <a href="https://maheshyaddanapudi.com">maheshyaddanapudi.com</a>
+            <span class="sep">|</span> <a href="https://www.linkedin.com/in/maheshyaddanapudi/">linkedin.com/in/maheshyaddanapudi</a>
+            <span class="sep">|</span> <a href="https://github.com/maheshyaddanapudi">github.com/maheshyaddanapudi</a>
+            <span class="sep">|</span> <a href="https://zzzmahesh.medium.com/">zzzmahesh.medium.com</a>
+        </div>
+    </div>
+
+    <div class="page">
+        <section>
+            <h2>Professional Summary</h2>
+            <p class="summary">Senior Machine Learning Engineer and Tech Alchemist with 17+ years of experience integrating cutting-edge ML solutions with microservices and cloud technology. Specializing in Agentic AI (Model Context Protocol, Spring AI, LangGraph), ML-driven forecasting, workflow orchestration, Cloud, Microservices, Service Oriented Architecture (SOA), Automation, Core Java, RESTful Webservices, DevOps, and Ansible. Former Google and Oracle engineer with a proven track record of architecting solutions that drive operational efficiency and deliver premier user experiences.</p>
+        </section>
+
+        <section>
+            <h2>Core Competencies</h2>
+            <div class="skill-group"><div class="label">AI / ML Engineering</div><div class="chips"><span class="chip">Agentic AI</span><span class="chip">Model Context Protocol (MCP)</span><span class="chip">Spring AI</span><span class="chip">LangGraph</span><span class="chip">A2A</span><span class="chip">CodeAct</span><span class="chip">RAG</span><span class="chip">Prompt Engineering</span><span class="chip">LLM-Assisted Development</span><span class="chip">MLX Fine-Tuning (LoRA/QLoRA)</span><span class="chip">Forecasting (N-BEATS, Prophet)</span><span class="chip">ML Pipelines</span></div></div>
+            <div class="skill-group"><div class="label">Languages &amp; Frameworks</div><div class="chips"><span class="chip">Java</span><span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">Spring Boot</span><span class="chip">Angular</span><span class="chip">React</span><span class="chip">FastAPI</span></div></div>
+            <div class="skill-group"><div class="label">Cloud &amp; DevOps</div><div class="chips"><span class="chip">Google Cloud Platform</span><span class="chip">AWS</span><span class="chip">Oracle Cloud</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Jenkins</span><span class="chip">Ansible</span><span class="chip">CI/CD</span><span class="chip">Infrastructure as Code</span></div></div>
+            <div class="skill-group"><div class="label">Architecture &amp; Data</div><div class="chips"><span class="chip">Microservices</span><span class="chip">Netflix OSS</span><span class="chip">REST APIs</span><span class="chip">SOA</span><span class="chip">Apache Lucene</span><span class="chip">Oracle</span><span class="chip">MySQL</span><span class="chip">SQL Server</span><span class="chip">IBM DB2</span><span class="chip">PostgreSQL</span><span class="chip">Elasticsearch</span></div></div>
+        </section>
+
+        <section>
+            <h2>Professional Experience</h2>
+
+            <div class="job allow-break">
+                <div class="job-head"><span class="title">Senior Machine Learning Engineer</span><span class="when">Sep 2022 – Present</span></div>
+                <div class="job-sub"><span class="co">WORKDAY</span><span class="where">Santa Clara, California, United States</span></div>
+                <div class="note">Software Engineer, Sep 2022 – Feb 2026 · promoted to Senior ML Engineer, Feb 2026</div>
+                <p class="desc">Engineer on an enterprise planning platform, focused on ML-driven forecasting, workflow automation, and agentic AI systems.</p>
+                <ul>
+                    <li>Architected and lead-developed an end-to-end predictive forecasting (ML) application: forecast definitions using historical actuals as reference and a target planned version as output, selectable forecasting models (N-BEATS, Prophet), and dispatch to an ML pipeline that computes forecasts and writes results back to the planned version.</li>
+                    <li>Built the forecasting scheduler as phase two: create/update and pause/resume schedules, timezone handling, OpenAPI/Swagger documentation, and expanded automated test coverage.</li>
+                    <li>Designed and led a lightweight, decoupled process/workflow engine powering configurable enterprise workflows — defining its core interfaces, lifecycle operations, and extensibility model.</li>
+                    <li>Pioneered AI-agent orchestration with the Model Context Protocol (MCP) and Spring AI — server/host integrations exposing enterprise workflow APIs as tools for AI assistants; the host design was adopted as an architectural baseline by the owning team.</li>
+                    <li>Champion of AI-assisted engineering — applying LLM tooling (Claude, GPT-4, Cursor) to design, prototyping, code/test generation, and debugging, and evangelizing AI-first workflows across the team.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-head"><span class="title">Principal Member of Technical Staff</span><span class="when">Jan 2022 – Sep 2022</span></div>
+                <div class="job-sub"><span class="co">ORACLE</span><span class="where">Seattle, Washington, United States</span></div>
+                <p class="desc">Contributed to Oracle's cloud infrastructure and enterprise solutions as a Principal Member of Technical Staff.</p>
+            </div>
+
+            <div class="job">
+                <div class="job-head"><span class="title">Software Engineer</span><span class="when">May 2021 – Dec 2021</span></div>
+                <div class="job-sub"><span class="co">GOOGLE</span><span class="where">Warsaw, Mazowieckie, Poland</span></div>
+                <p class="desc">Managed customer problems through effective diagnosis and resolution. Worked on Google Cloud Platform products and collaborated with multiple product and engineering teams.</p>
+            </div>
+
+            <div class="job">
+                <div class="job-head"><span class="title">Software Engineering Lead</span><span class="when">Dec 2016 – May 2021</span></div>
+                <div class="job-sub"><span class="co">JPMORGAN CHASE &amp; CO.</span><span class="where">Hyderabad, Telangana, India</span></div>
+                <p class="desc">Software Engineering Lead / Architect for an org-wide coding-less Automation Suite for Production Management. Led a team of developers working with Ansible, Netflix Conductor, Spring Boot, Docker / Kubernetes, and RESTful APIs.</p>
+            </div>
+
+            <div class="job">
+                <div class="job-head"><span class="title">Senior Consultant</span><span class="when">Apr 2016 – Dec 2016</span></div>
+                <div class="job-sub"><span class="co">VIRTUSA POLARIS</span><span class="where">Hyderabad, Telangana, India</span></div>
+                <p class="desc">Senior System Consultant and project lead for 10 associates, organized into Application Support, DBA Support, and Server Support teams providing complete end-to-end support for all Alere Apollo Platform applications.</p>
+            </div>
+
+            <div class="job">
+                <div class="job-head"><span class="title">Senior System Analyst – Project Lead</span><span class="when">Jan 2014 – Apr 2016</span></div>
+                <div class="job-sub"><span class="co">VALUELABS</span><span class="where">Malaysia</span></div>
+                <p class="desc">Project lead for 7 projects, including 5 support projects with regular monitoring and change-request handling.</p>
+                <ul>
+                    <li>WebSphere DataPower Migration Lead — led the migration of services from Xi50 DataPower to the latest Xi52 DataPower appliances.</li>
+                    <li>Architect / designer for the PDPA project — developed the entire application single-handedly, applying Java object-oriented design principles.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-head"><span class="title">Analyst – Systems Development</span><span class="when">Jan 2012 – Jan 2014</span></div>
+                <div class="job-sub"><span class="co">VERIZON DATA SERVICES INDIA</span><span class="where">Hyderabad, Telangana, India</span></div>
+                <p class="desc">Analyst – Systems Development, Secondary Release Lead, and Module Lead.</p>
+                <ul>
+                    <li>Gathered requirements from onsite coordinators and delegated to / worked with the offshore team for successful deliveries.</li>
+                    <li>Participated effectively in design and implementation discussions; provided production and testing support whenever required.</li>
+                    <li>Testing, debugging, defect fixing, and performance tuning of the codebase; worked closely with CVS &amp; SVN to avoid merge conflicts and keep the history clean.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-head"><span class="title">Systems Engineer</span><span class="when">Feb 2009 – Dec 2011</span></div>
+                <div class="job-sub"><span class="co">TATA CONSULTANCY SERVICES</span><span class="where">Chennai, Tamil Nadu, India</span></div>
+                <p class="desc">Developer and Backup Project Lead for a team of 7 at offshore.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Open Source &amp; Independent Work</h2>
+            <div class="cols">
+                <div>
+                    <div class="mini"><div class="t">MY-Manus <span class="tag">· Agentic AI</span></div><div class="d">Open-source Manus-style AI agent platform on the CodeAct architecture — Docker-sandboxed Python execution, MCP tool discovery, full session replay.</div></div>
+                    <div class="mini"><div class="t">MAOS <span class="tag">· Multi-Agent Orchestration</span></div><div class="d">Config-driven multi-agent orchestration: LangGraph supervisor, MCP tool plane, A2A agent discovery, OpenAI-compatible API.</div></div>
+                    <div class="mini"><div class="t">TestRail MCP Server <span class="tag">· AI Tooling</span></div><div class="d">Spring Boot + Spring AI MCP server exposing 101 TestRail operations through 4 Lucene-backed meta-tools with local-only credentials.</div></div>
+                    <div class="mini"><div class="t">MLX Fine-Tuning Pipelines <span class="tag">· Local ML</span></div><div class="d">LoRA/QLoRA fine-tuning of open-weight models (QwQ-32B, Qwen) on Apple Silicon for enterprise Java codebases — private, zero cloud cost.</div></div>
+                </div>
+                <div>
+                    <div class="mini"><div class="t">Conductor Boot &amp; Spring Boot Starter for Conductor <span class="tag">· Maven Central</span></div><div class="d">Published artifacts: Spring Boot wrapper of Netflix Conductor Server (embedded security, database, Elasticsearch) and a Conductor OSS starter.</div></div>
+                    <div class="mini"><div class="t">Published ML Models <span class="tag">· Hugging Face</span></div><div class="d">StarCoder2-3B (base &amp; instruction-tuned), Flowable documentation models (Llama / Qwen), Netflix Conductor documentation model.</div></div>
+                    <div class="mini"><div class="t">Automation &amp; Workflow OSS <span class="tag">· GitHub</span></div><div class="d">conductor-ng-ui, ansible-playbook-generator-ui, ansible-playbook-json2yaml, ansible-docs-boot, and more.</div></div>
+                    <div class="mini"><div class="t">Publications <span class="tag">· Medium / LinkedIn</span></div><div class="d">"Netflix Conductor — Spring Boot Wrapper" · "Bridging Realms: Humans and AI" · "Scientific Proof of God. Possible?"</div></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Certifications</h2>
+            <div class="cert-cols">
+                <div class="cert">AI Agentic Framework Using Spring AI — <span class="who">Vanderbilt University (In Progress)</span></div>
+                <div class="cert">Team Software Development with Generative AI — <span class="who">DeepLearning.AI, 2025</span></div>
+                <div class="cert">Generative AI for Software Development — <span class="who">DeepLearning.AI, 2025</span></div>
+                <div class="cert">Jenkins, From Zero To Hero: DevOps Jenkins Master — <span class="who">Udemy, 2020</span></div>
+                <div class="cert">The Complete Agile Scrum Fundamentals Course — <span class="who">Udemy, 2020</span></div>
+                <div class="cert">Spring Boot Microservices and Spring Cloud — <span class="who">Udemy, 2020</span></div>
+                <div class="cert">Mastering Ansible — <span class="who">Udemy, 2020</span></div>
+                <div class="cert">IBM WebSphere Certified Solutions Developer: Message Broker — <span class="who">IBM, 2013</span></div>
+                <div class="cert">IBM WebSphere Certified SOA Associate — <span class="who">IBM, 2013</span></div>
+                <div class="cert">IBM WebSphere Certified Solutions Developer: Web Services Development — <span class="who">IBM, 2012</span></div>
+                <div class="cert">IBM WebSphere Certified Solutions Developer: WebSphere Integration Developer — <span class="who">IBM, 2012</span></div>
+            </div>
+        </section>
+
+        <section>
+            <div class="edu-lang">
+                <div>
+                    <h2>Education</h2>
+                    <div class="mini"><div class="t">Bachelor of Engineering in Computer Science</div><div class="d">Anna University · 2004 – 2008</div></div>
+                </div>
+                <div>
+                    <h2>Languages</h2>
+                    <div class="langs"><span><b>English</b> — Professional</span><span><b>Hindi</b> — Professional</span><span><b>Telugu</b> — Native</span></div>
+                </div>
+            </div>
+        </section>
+
+        <footer>MAHESH YADDANAPUDI · SENIOR MACHINE LEARNING ENGINEER · MAHESHYADDANAPUDI.COM</footer>
+    </div>
 </body>
 </html>
