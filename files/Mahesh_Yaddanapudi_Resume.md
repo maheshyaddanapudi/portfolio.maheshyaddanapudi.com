@@ -1,5 +1,5 @@
 # MAHESH YADDANAPUDI
-## Senior Machine Learning Engineer — Agentic AI Platforms, MCP & Retrieval
+## ML Engineering Leader — Agentic AI Platform Architecture, MCP & Retrieval
 
 maheshyaddanapudi@gmail.com | [LinkedIn](https://www.linkedin.com/in/maheshyaddanapudi/) | [GitHub](https://github.com/maheshyaddanapudi) | [Medium](https://zzzmahesh.medium.com/)
 
@@ -7,7 +7,7 @@ maheshyaddanapudi@gmail.com | [LinkedIn](https://www.linkedin.com/in/maheshyadda
 
 ## PROFESSIONAL SUMMARY
 
-Senior Machine Learning Engineer with 17+ years of production engineering experience, now focused on architecting agentic AI platforms: multi-agent orchestration, MCP tool gateways and registries, hybrid retrieval (vector, keyword, graph), human-in-the-loop workflows, and agent evaluation/observability. Has designed and built agent platforms end to end — in Python (LangGraph, FastAPI) and Java (Spring AI, Spring Boot) — both inside a large enterprise and in open source, on a foundation of microservices, Kubernetes, and cloud architecture built at Google, Oracle, JPMorgan Chase, and Workday.
+Machine learning engineering leader with 17+ years of production engineering experience, focused on architecting agentic AI platforms: multi-agent orchestration, MCP tool gateways and registries, hybrid retrieval (vector, keyword, graph), human-in-the-loop workflows, and agent evaluation/observability. Has designed and built agent platforms end to end — in Python (LangGraph, FastAPI) and Java (Spring AI, Spring Boot) — both inside a large enterprise and in open source, on a foundation of microservices, Kubernetes, and cloud architecture built at Google, Oracle, JPMorgan Chase, and Workday.
 
 ---
 
