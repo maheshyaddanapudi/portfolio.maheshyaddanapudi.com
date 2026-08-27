@@ -83,7 +83,7 @@ Served as Developer and Backup Project Lead for a team of 7 at offshore.
 - **Agentic AI Architecture**: Multi-Agent Orchestration (LangGraph supervisor–worker, DAG sub-agents), Model Context Protocol (MCP) servers/hosts/gateways, Tool & Agent Registries, Spring AI, A2A (Agent-to-Agent), CodeAct, Human-in-the-Loop Workflows, Docker-Sandboxed Tool Execution
 - **Retrieval & RAG**: Hybrid Retrieval (FAISS vector + BM25 keyword + Neo4j GraphRAG), Reciprocal Rank Fusion, Embeddings (sentence-transformers), Apache Lucene, Grounded Synthesis, Elasticsearch
 - **Agent Evaluation & Observability**: OpenTelemetry, LangSmith, LLM-as-Judge, Run Tracing & Session Replay, Tool-Call Auditing, Quantified Offline Evaluation, Prometheus/Micrometer
-- **ML Engineering**: Time-Series Forecasting (N-BEATS, Prophet), ML Pipelines, MLX Fine-Tuning (LoRA/QLoRA), Prompt Engineering, LLM-Assisted Development (Claude, GPT, Cursor)
+- **ML Engineering**: Time-Series Forecasting (N-BEATS, Prophet), ML Pipelines, MLX Fine-Tuning (LoRA/QLoRA), Local Voice Pipelines (Whisper, sherpa-onnx STT, Kokoro TTS, VAD), Prompt Engineering, LLM-Assisted Development (Claude, GPT, Cursor)
 - **Programming Languages**: Python, Java, TypeScript, JavaScript
 - **Frameworks & Libraries**: FastAPI, Spring Boot, React, Angular
 - **Cloud Platforms**: Google Cloud Platform, AWS, Oracle Cloud
@@ -97,6 +97,7 @@ Served as Developer and Backup Project Lead for a team of 7 at offshore.
 
 ### Agentic AI Platforms
 - **Concierge Agent** - Registry-driven multi-agent platform: runtime MCP tool ingestion, tri-layer tool/skill/sub-agent registries, DAG sub-agent workflows with parallel fan-out, human-in-the-loop approvals, hybrid BM25+embedding retrieval (RRF), and OpenTelemetry + LangSmith run tracing (Python, FastAPI, LangGraph, Postgres, React)
+- **J.A.R.V.I.S** - Local-first personal AI operating system: multi-step agent runtime routed through a gated policy → approval → execution → verification core loop, MCP host with trust-gated external tools, provider-agnostic model gateway, AES-256-GCM encrypted memory with pgvector semantic recall, offline voice pipeline (wake word → VAD → STT → TTS), and a whole-stack acceptance harness (TypeScript, Python, Next.js, Postgres/pgvector)
 - **MAOS (Multi-Agent Orchestration Service)** - Fully configuration-driven multi-agent orchestration with a LangGraph supervisor, MCP tool plane, A2A agent discovery, and an OpenAI-compatible API
 - **Javis-LG** - Six-layer LangGraph supervisor–worker system: DB-persisted "living plans" synced with execution, reflection-based quality loop, dynamic worker registry with per-worker MCP servers, OpenAI-compatible API
 - **MY-Manus** - Open-source Manus-style AI agent platform built on the CodeAct architecture, with Docker-sandboxed Python execution, MCP tool discovery, and full session replay
@@ -105,6 +106,7 @@ Served as Developer and Backup Project Lead for a team of 7 at offshore.
 ### Retrieval & Applied AI
 - **Trilayer Generic Search** - Plugin-based hybrid retrieval framework fusing FAISS vector, BM25 keyword, and Neo4j graph search via reciprocal rank fusion, with LLM intent parsing, grounded citation-constrained synthesis, and LLM-as-judge evaluation
 - **Transcript Intelligence** - LLM-hybrid analytics over 100 B2B meeting transcripts with a five-tool MCP server; quantified evaluation: 97% categorization accuracy vs. hand labels, r=0.94 sentiment validation, churn-ranking sensitivity analysis
+- **Whisper Flow Local** - Fully local, privacy-first dictation: global hotkey → recording → local Whisper-family STT → Ollama LLM transcript cleanup → cross-platform text injection, with per-app tone profiles, correction learning, and a live streaming overlay; MIT-licensed, no cloud, no telemetry
 
 ### Maven Central / OSS Artifacts
 - **Spring Boot Starter For Conductor OSS** - A Spring Boot starter for Conductor OSS with Queue Configuration
