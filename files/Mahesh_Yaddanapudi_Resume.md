@@ -1,5 +1,5 @@
 # MAHESH YADDANAPUDI
-## Tech Alchemist — Code, Cloud, & ML
+## Senior Machine Learning Engineer — Agentic AI Platforms, MCP & Retrieval
 
 maheshyaddanapudi@gmail.com | [LinkedIn](https://www.linkedin.com/in/maheshyaddanapudi/) | [GitHub](https://github.com/maheshyaddanapudi) | [Medium](https://zzzmahesh.medium.com/)
 
@@ -7,7 +7,7 @@ maheshyaddanapudi@gmail.com | [LinkedIn](https://www.linkedin.com/in/maheshyadda
 
 ## PROFESSIONAL SUMMARY
 
-Senior Machine Learning Engineer and Tech Alchemist with 17+ years of experience integrating cutting-edge ML solutions with microservices and cloud technology. Specializing in Agentic AI (Model Context Protocol, Spring AI, LangGraph), ML-driven forecasting, workflow orchestration, Cloud, Microservices, Service Oriented Architecture (SOA), Automation, Core Java, RESTful Webservices, DevOps, and Ansible. Former Google and Oracle engineer with a proven track record of architecting solutions that drive operational efficiency and deliver premier user experiences.
+Senior Machine Learning Engineer with 17+ years of production engineering experience, now focused on architecting agentic AI platforms: multi-agent orchestration, MCP tool gateways and registries, hybrid retrieval (vector, keyword, graph), human-in-the-loop workflows, and agent evaluation/observability. Has designed and built agent platforms end to end — in Python (LangGraph, FastAPI) and Java (Spring AI, Spring Boot) — both inside a large enterprise and in open source, on a foundation of microservices, Kubernetes, and cloud architecture built at Google, Oracle, JPMorgan Chase, and Workday.
 
 ---
 
@@ -24,6 +24,7 @@ Engineer on an enterprise planning platform, focused on ML-driven forecasting, w
 - Built the forecasting scheduler as phase two: create/update and pause/resume schedules, timezone handling, OpenAPI/Swagger documentation, and expanded automated test coverage.
 - Designed and led a lightweight, decoupled process/workflow engine powering configurable enterprise workflows — defining its core interfaces, lifecycle operations, and extensibility model.
 - Pioneered AI-agent orchestration with the Model Context Protocol (MCP) and Spring AI — server/host integrations exposing enterprise workflow APIs as tools for AI assistants; the host design was adopted as an architectural baseline by the owning team.
+- Prototyped natural-language metadata discovery with a hybrid GraphRAG approach — FAISS vector, keyword, and Neo4j graph retrieval fused via reciprocal rank fusion, with LLM intent parsing and grounded synthesis.
 - Champion of AI-assisted engineering — applying LLM tooling (Claude, GPT-4, Cursor) to design, prototyping, code/test generation, and debugging, and evangelizing AI-first workflows across the team.
 
 ### ORACLE
@@ -79,23 +80,31 @@ Served as Developer and Backup Project Lead for a team of 7 at offshore.
 
 ## TECHNICAL SKILLS
 
-- **AI / ML Engineering**: Agentic AI, Model Context Protocol (MCP), Spring AI, LangGraph, A2A (Agent-to-Agent), CodeAct, RAG, Prompt Engineering, LLM-Assisted Development (Claude, GPT, Cursor), MLX Fine-Tuning (LoRA/QLoRA), Time-Series Forecasting (N-BEATS, Prophet), ML Pipelines
-- **Programming Languages**: Java, Python, JavaScript, TypeScript
-- **Frameworks & Libraries**: Spring Boot, Angular, React, FastAPI
+- **Agentic AI Architecture**: Multi-Agent Orchestration (LangGraph supervisor–worker, DAG sub-agents), Model Context Protocol (MCP) servers/hosts/gateways, Tool & Agent Registries, Spring AI, A2A (Agent-to-Agent), CodeAct, Human-in-the-Loop Workflows, Docker-Sandboxed Tool Execution
+- **Retrieval & RAG**: Hybrid Retrieval (FAISS vector + BM25 keyword + Neo4j GraphRAG), Reciprocal Rank Fusion, Embeddings (sentence-transformers), Apache Lucene, Grounded Synthesis, Elasticsearch
+- **Agent Evaluation & Observability**: OpenTelemetry, LangSmith, LLM-as-Judge, Run Tracing & Session Replay, Tool-Call Auditing, Quantified Offline Evaluation, Prometheus/Micrometer
+- **ML Engineering**: Time-Series Forecasting (N-BEATS, Prophet), ML Pipelines, MLX Fine-Tuning (LoRA/QLoRA), Prompt Engineering, LLM-Assisted Development (Claude, GPT, Cursor)
+- **Programming Languages**: Python, Java, TypeScript, JavaScript
+- **Frameworks & Libraries**: FastAPI, Spring Boot, React, Angular
 - **Cloud Platforms**: Google Cloud Platform, AWS, Oracle Cloud
 - **DevOps & CI/CD**: Docker, Kubernetes, Jenkins, Ansible, Infrastructure as Code (IaC)
-- **Databases**: Oracle, MySQL, Microsoft SQL Server, IBM DB2, PL/SQL, PostgreSQL, Elasticsearch
+- **Databases**: PostgreSQL, Oracle, MySQL, Microsoft SQL Server, IBM DB2, PL/SQL, Elasticsearch, Neo4j
 - **Microservices**: Netflix OSS Stack, Spring Cloud, REST APIs, Service-Oriented Architecture (SOA)
-- **Other Technologies**: Apache Lucene, Docker Sandboxing, OAuth2, Shell Scripting
 
 ---
 
-## OPEN SOURCE CONTRIBUTIONS
+## OPEN SOURCE & SELECTED SYSTEMS
 
-### Agentic AI & Tooling
-- **MY-Manus** - Open-source Manus-style AI agent platform built on the CodeAct architecture, with Docker-sandboxed Python execution, MCP tool discovery, and full session replay
+### Agentic AI Platforms
+- **Concierge Agent** - Registry-driven multi-agent platform: runtime MCP tool ingestion, tri-layer tool/skill/sub-agent registries, DAG sub-agent workflows with parallel fan-out, human-in-the-loop approvals, hybrid BM25+embedding retrieval (RRF), and OpenTelemetry + LangSmith run tracing (Python, FastAPI, LangGraph, Postgres, React)
 - **MAOS (Multi-Agent Orchestration Service)** - Fully configuration-driven multi-agent orchestration with a LangGraph supervisor, MCP tool plane, A2A agent discovery, and an OpenAI-compatible API
+- **Javis-LG** - Six-layer LangGraph supervisor–worker system: DB-persisted "living plans" synced with execution, reflection-based quality loop, dynamic worker registry with per-worker MCP servers, OpenAI-compatible API
+- **MY-Manus** - Open-source Manus-style AI agent platform built on the CodeAct architecture, with Docker-sandboxed Python execution, MCP tool discovery, and full session replay
 - **TestRail MCP Server** - Spring Boot + Spring AI MCP server exposing 101 TestRail operations through 4 Lucene-backed meta-tools, with a local-only credential security model
+
+### Retrieval & Applied AI
+- **Trilayer Generic Search** - Plugin-based hybrid retrieval framework fusing FAISS vector, BM25 keyword, and Neo4j graph search via reciprocal rank fusion, with LLM intent parsing, grounded citation-constrained synthesis, and LLM-as-judge evaluation
+- **Transcript Intelligence** - LLM-hybrid analytics over 100 B2B meeting transcripts with a five-tool MCP server; quantified evaluation: 97% categorization accuracy vs. hand labels, r=0.94 sentiment validation, churn-ranking sensitivity analysis
 
 ### Maven Central / OSS Artifacts
 - **Spring Boot Starter For Conductor OSS** - A Spring Boot starter for Conductor OSS with Queue Configuration
