@@ -24,7 +24,6 @@ Engineer on an enterprise planning platform, focused on ML-driven forecasting, w
 - Built the forecasting scheduler as phase two: create/update and pause/resume schedules, timezone handling, OpenAPI/Swagger documentation, and expanded automated test coverage.
 - Designed and led a lightweight, decoupled process/workflow engine powering configurable enterprise workflows — defining its core interfaces, lifecycle operations, and extensibility model.
 - Pioneered AI-agent orchestration with the Model Context Protocol (MCP) and Spring AI — server/host integrations exposing enterprise workflow APIs as tools for AI assistants; the host design was adopted as an architectural baseline by the owning team.
-- Prototyped natural-language metadata discovery with a hybrid GraphRAG approach — FAISS vector, keyword, and Neo4j graph retrieval fused via reciprocal rank fusion, with LLM intent parsing and grounded synthesis.
 - Champion of AI-assisted engineering — applying LLM tooling (Claude, GPT-4, Cursor) to design, prototyping, code/test generation, and debugging, and evangelizing AI-first workflows across the team.
 
 ### ORACLE
@@ -81,7 +80,7 @@ Served as Developer and Backup Project Lead for a team of 7 at offshore.
 ## TECHNICAL SKILLS
 
 - **Agentic AI Architecture**: Multi-Agent Orchestration (LangGraph supervisor–worker, DAG sub-agents), Model Context Protocol (MCP) servers/hosts/gateways, Tool & Agent Registries, Spring AI, A2A (Agent-to-Agent), CodeAct, Human-in-the-Loop Workflows, Docker-Sandboxed Tool Execution
-- **Retrieval & RAG**: Hybrid Retrieval (FAISS vector + BM25 keyword + Neo4j GraphRAG), Reciprocal Rank Fusion, Embeddings (sentence-transformers), Apache Lucene, Grounded Synthesis, Elasticsearch
+- **Retrieval & RAG**: Hybrid Retrieval (pgvector + BM25 keyword + Neo4j GraphRAG), Reciprocal Rank Fusion, Embeddings (sentence-transformers), Apache Lucene, Grounded Synthesis, Elasticsearch
 - **Agent Evaluation & Observability**: OpenTelemetry, LangSmith, LLM-as-Judge, Run Tracing & Session Replay, Tool-Call Auditing, Quantified Offline Evaluation, Prometheus/Micrometer
 - **ML Engineering**: Time-Series Forecasting (N-BEATS, Prophet), ML Pipelines, MLX Fine-Tuning (LoRA/QLoRA), Local Voice Pipelines (Whisper, sherpa-onnx STT, Kokoro TTS, VAD), Prompt Engineering, LLM-Assisted Development (Claude, GPT, Cursor)
 - **Programming Languages**: Python, Java, TypeScript, JavaScript
@@ -104,7 +103,7 @@ Served as Developer and Backup Project Lead for a team of 7 at offshore.
 - **TestRail MCP Server** - Spring Boot + Spring AI MCP server exposing 101 TestRail operations through 4 Lucene-backed meta-tools, with a local-only credential security model
 
 ### Retrieval & Applied AI
-- **Trilayer Generic Search** - Plugin-based hybrid retrieval framework fusing FAISS vector, BM25 keyword, and Neo4j graph search via reciprocal rank fusion, with LLM intent parsing, grounded citation-constrained synthesis, and LLM-as-judge evaluation
+- **Trilayer Generic Search** - Plugin-based hybrid retrieval framework fusing pgvector semantic, BM25 keyword, and Neo4j graph search via reciprocal rank fusion, with LLM intent parsing, grounded citation-constrained synthesis, and LLM-as-judge evaluation
 - **Transcript Intelligence** - LLM-hybrid analytics over 100 B2B meeting transcripts with a five-tool MCP server; quantified evaluation: 97% categorization accuracy vs. hand labels, r=0.94 sentiment validation, churn-ranking sensitivity analysis
 - **Whisper Flow Local** - Fully local, privacy-first dictation: global hotkey → recording → local Whisper-family STT → Ollama LLM transcript cleanup → cross-platform text injection, with per-app tone profiles, correction learning, and a live streaming overlay; MIT-licensed, no cloud, no telemetry
 
