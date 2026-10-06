@@ -1,7 +1,7 @@
 # MAHESH YADDANAPUDI
 ## ML Engineering Leader — Agentic AI Platform Architecture, MCP & Retrieval
 
-maheshyaddanapudi@gmail.com | [LinkedIn](https://www.linkedin.com/in/maheshyaddanapudi/) | [GitHub](https://github.com/maheshyaddanapudi) | [Medium](https://zzzmahesh.medium.com/)
+zzzmahesh@gmail.com | [LinkedIn](https://www.linkedin.com/in/mahesh-yaddanapudi/) | [GitHub](https://github.com/maheshyaddanapudi) | [Medium](https://zzzmahesh.medium.com/)
 
 ---
 
@@ -128,8 +128,8 @@ Served as Developer and Backup Project Lead for a team of 7 at offshore.
 
 ## EDUCATION
 
-### ANNA UNIVERSITY
-**Bachelor of Engineering in Computer Science**  
+### ST. JOSEPH'S COLLEGE OF ENGINEERING
+**Bachelor of Engineering in Electronics and Instrumentation**  
 *2004 - 2008*
 
 ---
