@@ -51,19 +51,19 @@ Served as Software Engineering Lead / Architect for development of an org-wide c
 Served as Senior System Consultant and project lead for 10 associates, organized into Application Support, DBA Support, and Server Support teams providing complete end-to-end support for all Alere Apollo Platform applications.
 
 ### VALUELABS
-**Senior System Analyst - Project Lead**  
+**System Analyst**  
 *Jan 2014 - Apr 2016 | Malaysia*
 
-Served as Senior System Analyst and project lead for 7 projects, including 5 support projects with regular monitoring and change-request handling.
+System Analyst leading 7 projects, including 5 support projects with regular monitoring and change-request handling.
 
 - WebSphere DataPower Migration Lead — led the migration of services from Xi50 DataPower to the latest Xi52 DataPower appliances.
 - Architect / designer for the PDPA project — developed the entire application single-handedly, applying Java object-oriented design principles.
 
 ### VERIZON DATA SERVICES INDIA
-**Analyst - Systems Development**  
-*Jan 2012 - Jan 2014 | Hyderabad, Telangana, India*
+**Analyst, System Development**  
+*Dec 2011 - Jan 2014 | Hyderabad, Telangana, India*
 
-Served as Analyst - Systems Development, Secondary Release Lead, and Module Lead.
+Analyst, System Development; also served as secondary release lead and module lead.
 
 - Gathered requirements from onsite coordinators and delegated to / worked with the offshore team for successful deliveries.
 - Participated effectively in design and implementation discussions; provided production and testing support whenever required.
