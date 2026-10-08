@@ -1,7 +1,7 @@
 # MAHESH YADDANAPUDI
 ## ML Engineering Leader — Agentic AI Platform Architecture, MCP & Retrieval
 
-zzzmahesh@gmail.com | [LinkedIn](https://www.linkedin.com/in/mahesh-yaddanapudi/) | [GitHub](https://github.com/maheshyaddanapudi) | [Medium](https://zzzmahesh.medium.com/)
+Mountain House, CA | zzzmahesh@gmail.com | [LinkedIn](https://www.linkedin.com/in/mahesh-yaddanapudi/) | [GitHub](https://github.com/maheshyaddanapudi) | [Medium](https://zzzmahesh.medium.com/)
 
 ---
 
@@ -30,7 +30,10 @@ Engineer on an enterprise planning platform, focused on ML-driven forecasting, w
 **Principal Member of Technical Staff**  
 *Jan 2022 - Sep 2022 | Seattle, Washington, United States*
 
-Worked as a Principal Member of Technical Staff, contributing to Oracle's cloud infrastructure and enterprise solutions.
+Principal Member of Technical Staff on the core backend team for Oracle Cloud Infrastructure (OCI) Block Storage, the service behind block volumes and boot volumes for OCI compute.
+
+- Designed and built backend features across the control-plane and data-plane services of the distributed storage system, with a focus on reliability, durability and performance at cloud scale.
+- Took part in design reviews, code reviews and on-call operations for a tier-0 cloud service, and improved operational tooling and monitoring.
 
 ### GOOGLE
 **Software Engineer**  
@@ -44,26 +47,26 @@ Managed customer problems through effective diagnosis and resolution. Worked on 
 
 Served as Software Engineering Lead / Architect for development of an org-wide coding-less Automation Suite for Production Management. Led a team of developers working with technologies like Ansible, Netflix Conductor, Spring Boot, Docker / Kubernetes, and RESTful APIs.
 
-### VIRTUSA POLARIS
-**Senior Consultant**  
-*Apr 2016 - Dec 2016 | Hyderabad, Telangana, India*
+### VIRTUSA
+**Senior Consultant Project Lead**  
+*Apr 2016 - Nov 2016 | Hyderabad, Telangana, India*
 
-Served as Senior System Consultant and project lead for 10 associates, organized into Application Support, DBA Support, and Server Support teams providing complete end-to-end support for all Alere Apollo Platform applications.
+Project lead for client delivery. Managed team delivery, client relationships and release management, and coordinated cross-functional teams so projects shipped on schedule.
 
 ### VALUELABS
-**Senior System Analyst - Project Lead**  
+**System Analyst**  
 *Jan 2014 - Apr 2016 | Malaysia*
 
-Served as Senior System Analyst and project lead for 7 projects, including 5 support projects with regular monitoring and change-request handling.
+System Analyst leading 7 projects, including 5 support projects with regular monitoring and change-request handling.
 
 - WebSphere DataPower Migration Lead — led the migration of services from Xi50 DataPower to the latest Xi52 DataPower appliances.
 - Architect / designer for the PDPA project — developed the entire application single-handedly, applying Java object-oriented design principles.
 
 ### VERIZON DATA SERVICES INDIA
-**Analyst - Systems Development**  
-*Jan 2012 - Jan 2014 | Hyderabad, Telangana, India*
+**Analyst, System Development**  
+*Dec 2011 - Jan 2014 | Hyderabad, Telangana, India*
 
-Served as Analyst - Systems Development, Secondary Release Lead, and Module Lead.
+Analyst, System Development; also served as secondary release lead and module lead.
 
 - Gathered requirements from onsite coordinators and delegated to / worked with the offshore team for successful deliveries.
 - Participated effectively in design and implementation discussions; provided production and testing support whenever required.
@@ -92,10 +95,10 @@ Served as Developer and Backup Project Lead for a team of 7 at offshore.
 
 ---
 
-## OPEN SOURCE & SELECTED SYSTEMS
+## INDEPENDENT PROJECTS (PUBLIC UNLESS MARKED PRIVATE)
 
 ### Agentic AI Platforms
-- **Concierge Agent** - Registry-driven multi-agent platform: runtime MCP tool ingestion, tri-layer tool/skill/sub-agent registries, DAG sub-agent workflows with parallel fan-out, human-in-the-loop approvals, hybrid BM25+embedding retrieval (RRF), and OpenTelemetry + LangSmith run tracing (Python, FastAPI, LangGraph, Postgres, React)
+- **Concierge Agent** (private; source available on request) - Registry-driven multi-agent platform: runtime MCP tool ingestion, tri-layer tool/skill/sub-agent registries, DAG sub-agent workflows with parallel fan-out, human-in-the-loop approvals, hybrid BM25+embedding retrieval (RRF), and OpenTelemetry + LangSmith run tracing (Python, FastAPI, LangGraph, Postgres, React)
 - **J.A.R.V.I.S** - Local-first personal AI operating system: multi-step agent runtime routed through a gated policy → approval → execution → verification core loop, MCP host with trust-gated external tools, provider-agnostic model gateway, AES-256-GCM encrypted memory with pgvector semantic recall, offline voice pipeline (wake word → VAD → STT → TTS), and a whole-stack acceptance harness (TypeScript, Python, Next.js, Postgres/pgvector)
 - **MAOS (Multi-Agent Orchestration Service)** - Fully configuration-driven multi-agent orchestration with a LangGraph supervisor, MCP tool plane, A2A agent discovery, and an OpenAI-compatible API
 - **Javis-LG** - Six-layer LangGraph supervisor–worker system: DB-persisted "living plans" synced with execution, reflection-based quality loop, dynamic worker registry with per-worker MCP servers, OpenAI-compatible API
